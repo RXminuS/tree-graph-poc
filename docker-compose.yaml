@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  tg_db:
+    image: apache/age:latest
+    # restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=treegraph
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5430:5432
